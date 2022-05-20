@@ -7,9 +7,7 @@ use core::panic::PanicInfo;
 
 #[no_mangle]
 pub extern "C" fn _start() -> ! {
-    use core::fmt::Write;
-    vga_buffer::WRITER.lock().write_str("Rustic OS Works!").unwrap();
-    write!(vga_buffer::WRITER.lock(), ", Here are some numbers: {} {}", 42, 1.337).unwrap();
+    println!("Rustic OS Works{}", "!");
 
     loop {}
 }
